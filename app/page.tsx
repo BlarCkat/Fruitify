@@ -30,7 +30,7 @@ const HomeView = () => {
             id="hero-heading"
             className="text-[40px] md:text-[56px] lg:text-[72px] leading-[1.1] font-medium tracking-[-0.02em] max-w-[960px]"
           >
-            Next-Gen Operating System for Africa's Fresh Produce Exports.
+            Next-Gen Operating System for Africa&apos;s Fresh Produce Exports.
           </h1>
           <p className="mt-8 text-[#999999] text-lg md:text-xl max-w-[800px] leading-relaxed">
             We connect climate-smart farms, verified traceability, and global trade, empowering farmers, exporters, and buyers to achieve more, waste less, and trade sustainably.
@@ -247,9 +247,9 @@ const HomeView = () => {
               <span className="text-[#999999]">Trading Transparently.</span>
             </h2>
             <p className="mt-6 text-lg md:text-xl text-[#666666] max-w-[800px] mx-auto leading-relaxed">
-              At Fruitify, sustainability is at the heart of everything we do. Through 
-              smart farming and traceable trade, we're reducing waste, improving 
-              livelihoods, and creating a transparent export ecosystem that 
+              At Fruitify, sustainability is at the heart of everything we do. Through
+              smart farming and traceable trade, we&apos;re reducing waste, improving
+              livelihoods, and creating a transparent export ecosystem that
               rewards quality and responsibility.
             </p>
           </div>
@@ -334,7 +334,7 @@ const HomeView = () => {
         <div className="relative z-10 h-full flex items-center">
           <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-10">
             <h2 className="lg:pt-20 text-[32px] md:text-[40px] lg:text-[56px] leading-[1.2] font-medium tracking-[-0.02em] max-w-[800px]" style={{ width: '80%' }}>
-              We're building <span className="text-white">the future of </span>
+              We&apos;re building <span className="text-white">the future of </span>
               agriculture because we are 
               <span className="text-[#999999]"> #BigOnSustainability.</span>
             </h2>
@@ -349,10 +349,10 @@ const HomeView = () => {
           <div className="bg-[#FF4500] rounded-2xl p-12 md:p-16">
             <div className="max-w-[600px]">
               <h2 className="text-[32px] md:text-[40px] lg:text-[48px] leading-[1.2] font-medium tracking-[-0.02em] text-black mb-6">
-                Let's Build the Future of Agricultural Trade.
+                Let&apos;s Build the Future of Agricultural Trade.
               </h2>
               <p className="text-lg md:text-xl text-black/80 mb-8">
-                Whether you're a farmer, cooperative, exporter, or global buyer, 
+                Whether you&apos;re a farmer, cooperative, exporter, or global buyer, 
                 Fruitify is your partner for growth, traceability, and sustainable trade.
               </p>
               <button 
@@ -371,7 +371,7 @@ const HomeView = () => {
             <div>
               <h2 className="text-[32px] md:text-[40px] lg:text-[48px] leading-[1.2] font-medium tracking-[-0.02em] max-w-[800px] mb-8">
                 Building <span className="text-white">the Operating</span><br />
-                <span className="text-white">System for Africa's Fresh</span><br />
+                <span className="text-white">System for Africa&apos;s Fresh</span><br />
                 <span className="text-[#999999]">Produce Exports.</span>
               </h2>
               
