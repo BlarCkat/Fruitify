@@ -137,9 +137,10 @@ const HomeView = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
             {/* OnFarm Card */}
-            <div className="relative">
-              <div className="absolute lg:mt-[150px] mt-[70px] px-8 text-sm lg:px-20 w-full">
-                <p className='text-gray-500'>
+            <div className="relative bg-[#0A0A0A] lg:h-[800px] h-[600px] rounded-2xl overflow-hidden">
+              <div className="absolute lg:mt-[50px] mt-[70px] px-8 text-sm lg:px-20 w-full z-2">
+                <Image src={'/img/logo_onfarm.svg'} alt='onfarm logo' width={150} height={50} />
+                <p className='text-gray-500 pt-10'>
                   Digitize field activities, integrate drone and AI insights, and maintain verified  production records. OnFarm helps farms improve harvest quality, meet export  standards, and build traceable supply data. <br />
                 • Real-time field monitoring. <br />  
                 • Drone and AI-powered crop insights. <br /> 
@@ -147,14 +148,17 @@ const HomeView = () => {
                 </p>
                 <button className='mt-6 bg-[#FF5D2A] text-black font-bold py-2 px-4 rounded hover:opacity-70 cursor-pointer transition-opacity'>Download onFarm</button>
               </div>
-              <Image src={'/img/onfarm.png'} alt='onfarm' width={600} height={200}/>
+              <div className="relative w-full h-full z-1">
+                <Image src={'/img/img_onfarm.png'} alt='onfarm' width={600} height={200} className='absolute bottom-0'/>
+              </div>
             </div>
             
 
             {/* OnTrade Card */}
-            <div className="relative">
-              <div className="absolute lg:mt-[150px] mt-[70px] px-8 text-sm lg:px-20 w-full">
-                <p className='text-gray-500'>
+            <div className="relative bg-[#0A0A0A] lg:h-[800px] h-[600px] rounded-2xl overflow-hidden">
+              <div className="absolute lg:mt-[50px] mt-[70px] px-8 text-sm lg:px-20 w-full z-2">
+                <Image src={'/img/logo_ontrade.svg'} alt='ontrade logo' width={150} height={50} />
+                <p className='text-gray-500 pt-10'>
                   OnTrade connects verified African producers directly to international buyers. It  consolidates sourcing, documentation, and compliance into one trusted digital  platform. <br />
                 • Access verified export catalogs. <br />  
                 • Track orders from farm to shipment. <br /> 
@@ -162,7 +166,9 @@ const HomeView = () => {
                 </p>
                 <button className='mt-6 bg-[#FFC32A] text-black font-bold py-2 px-4 rounded hover:opacity-70 cursor-pointer transition-opacity'>Download onTrade</button>
               </div>
-              <Image src={'/img/ontrade.png'} alt='ontrade' width={600} height={200}/>
+              <div className="relative w-full h-full z-1">
+                <Image src={'/img/img_ontrade.png'} alt='ontrade' width={600} height={200} className='absolute bottom-0'/>
+              </div>
             </div>
           </div>
         </section>
