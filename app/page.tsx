@@ -53,7 +53,7 @@ const HomeView = () => {
 
         {/* Dashboard Preview Section */}
         <section 
-          className="relative w-full h-fit pb-20"
+          className="relative w-full h-fit pb-20 scale-[1.4]"
           aria-label="Platform dashboard preview"
         >
           <Image src={'/img/hero_dashboard.png'} alt="OnTrade platform dashboard" layout="responsive" width={1900} height={800} />
