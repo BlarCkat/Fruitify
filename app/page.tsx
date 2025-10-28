@@ -67,7 +67,7 @@ const HomeView = () => {
         >
           <div className="max-w-[800px]">
             <a href="/" className="text-2xl font-medium tracking-tight mb-6 block" aria-label="Frutify home">
-              frutify.
+              <Image src={'/img/logo_white.svg'} alt="Frutify Logo" width={120} height={40} />
             </a>
             <h2 
               id="about-heading"
@@ -86,7 +86,7 @@ const HomeView = () => {
         </section>
 
         {/* Features Section with Pie Chart */}
-        <section className="mt-32 md:mt-40 flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
+        <section className="mt-32 md:mt-40 flex flex-col-reverse lg:flex-row items-center justify-between gap-4">
           <div className="w-full lg:w-1/2">
             <h2 className="text-[32px] md:text-[40px] lg:text-[48px] leading-[1.2] font-medium tracking-[-0.02em] mb-6">
               Reduce post-harvest waste<br />
@@ -98,8 +98,8 @@ const HomeView = () => {
           </div>
           
           <div className="w-full lg:w-1/2 flex justify-center items-center">
-            {/* <InteractivePieChart /> */}
-            <Image src={'/img/img_data-driven-farming.png'} alt="Data-driven farming" layout="responsive" width={800} height={600} />
+            <InteractivePieChart />
+            {/* <Image src={'/img/img_data-driven-farming.png'} alt="Data-driven farming" layout="responsive" width={800} height={600} /> */}
           </div>
         </section>
 
@@ -137,51 +137,32 @@ const HomeView = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
             {/* OnFarm Card */}
-            <div className="bg-[#111111] rounded-2xl p-8 flex flex-col">
-              <div className="mb-8">
-                <h3 className="text-2xl font-medium mb-6">onfarm.</h3>
-                <p className="text-[#666666] mb-8 leading-relaxed">
-                  Digitize field activities, integrate drone and AI insights, and maintain verified production records. OnFarm helps farms 
-                  improve harvest quality, meet export standards, and build traceable supply data.
+            <div className="relative">
+              <div className="absolute lg:mt-[150px] mt-[70px] px-8 text-sm lg:px-20 w-full">
+                <p className='text-gray-500'>
+                  Digitize field activities, integrate drone and AI insights, and maintain verified  production records. OnFarm helps farms improve harvest quality, meet export  standards, and build traceable supply data. <br />
+                • Real-time field monitoring. <br />  
+                • Drone and AI-powered crop insights. <br /> 
+                • GlobalG.A.P.-aligned traceability.
                 </p>
-                <ul className="space-y-2 text-[#666666]">
-                  <li>• Real-time field monitoring</li>
-                  <li>• Drone and AI-powered crop insights</li>
-                  <li>• Production insights and traceability</li>
-                </ul>
-                <button 
-                  className="mt-8 px-6 py-2 rounded-full bg-[#FF4500] text-white font-medium hover:bg-[#FF5722] transition-colors"
-                >
-                  Download onFarm
-                </button>
+                <button className='mt-6 bg-[#FF5D2A] text-black font-bold py-2 px-4 rounded hover:opacity-70 cursor-pointer transition-opacity'>Download onFarm</button>
               </div>
-              <div className="mt-auto">
-                <Image src={'/img/img_onfarm.png'} alt='onfarm' width={500} height={200}/>
-              </div>
+              <Image src={'/img/onfarm.png'} alt='onfarm' width={600} height={200}/>
             </div>
+            
 
             {/* OnTrade Card */}
-            <div className="bg-[#111111] rounded-2xl p-8 flex flex-col">
-              <div className="mb-8">
-                <h3 className="text-2xl font-medium mb-6">ontrade.</h3>
-                <p className="text-[#666666] mb-8 leading-relaxed">
-                  OnTrade connects verified African producers directly to international buyers. It consolidates export trade forms, 
-                  documentation, and compliance into one unified digital platform.
+            <div className="relative">
+              <div className="absolute lg:mt-[150px] mt-[70px] px-8 text-sm lg:px-20 w-full">
+                <p className='text-gray-500'>
+                  OnTrade connects verified African producers directly to international buyers. It  consolidates sourcing, documentation, and compliance into one trusted digital  platform. <br />
+                • Access verified export catalogs. <br />  
+                • Track orders from farm to shipment. <br /> 
+                • Ensure compliance and audit readiness.
                 </p>
-                <ul className="space-y-2 text-[#666666]">
-                  <li>• Access verified export catalogs</li>
-                  <li>• Track orders from farm to shipment</li>
-                  <li>• Ensure compliance and audit readiness</li>
-                </ul>
-                <button 
-                  className="mt-8 px-6 py-2 rounded-full bg-[#FFD700] text-black font-medium hover:bg-[#FFE44D] transition-colors"
-                >
-                  Join OnTrade
-                </button>
+                <button className='mt-6 bg-[#FFC32A] text-black font-bold py-2 px-4 rounded hover:opacity-70 cursor-pointer transition-opacity'>Download onTrade</button>
               </div>
-              <div className="mt-auto">
-                <Image src={'/img/img_ontrade.png'} alt='onfarm' width={500} height={200}/>
-              </div>
+              <Image src={'/img/ontrade.png'} alt='ontrade' width={600} height={200}/>
             </div>
           </div>
         </section>
@@ -199,12 +180,13 @@ const HomeView = () => {
             {/* Top Row - Two Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Farmers Card */}
-              <div className="group relative h-[280px] rounded-2xl overflow-hidden">
+              <div className="group relative h-[400px] rounded-2xl overflow-hidden">
                 <div className="absolute inset-0">
-                  <img 
-                    src="/farmers.jpg" 
-                    alt="Farmer using digital tools in the field" 
+                  <Image
+                    src="/img/for-farmers.webp"
+                    alt="Farmer using digital tools in the field"
                     className="w-full h-full object-cover"
+                    width={600} height={400}
                   />
                   <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/50 to-black" />
                 </div>
@@ -217,12 +199,13 @@ const HomeView = () => {
               </div>
 
               {/* Exporters Card */}
-              <div className="group relative h-[280px] rounded-2xl overflow-hidden">
+              <div className="group relative h-[400px] rounded-2xl overflow-hidden">
                 <div className="absolute inset-0">
-                  <img 
-                    src="/exporters.jpg" 
-                    alt="Container terminal with cargo operations" 
+                 <Image
+                    src="/img/for-exporters.avif"
+                    alt="Exporters collaborating with farmers"
                     className="w-full h-full object-cover"
+                    width={600} height={800}
                   />
                   <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/50 to-black" />
                 </div>
@@ -236,13 +219,14 @@ const HomeView = () => {
             </div>
 
             {/* Bottom Row - Full Width Card */}
-            <div className="group relative h-[280px] rounded-2xl overflow-hidden">
+            <div className="group relative h-[480px] rounded-2xl overflow-hidden">
               <div className="absolute inset-0">
-                <img 
-                  src="/buyers.jpg" 
-                  alt="Shipping containers being loaded" 
-                  className="w-full h-full object-cover"
-                />
+                 <Image
+                    src="/img/for-buyers.avif"
+                    alt="Buyer looking at containers"
+                    className="w-full h-full object-cover"
+                    width={600} height={800}
+                  />
                 <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/50 to-black" />
               </div>
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -274,11 +258,12 @@ const HomeView = () => {
             {/* Climate-smart Card */}
             <div className="group relative h-[360px] rounded-2xl overflow-hidden">
               <div className="absolute inset-0">
-                <img 
-                  src="/climate-smart.jpg" 
-                  alt="Farmer using sustainable farming practices" 
-                  className="w-full h-full object-cover"
-                />
+                 <Image
+                    src="/img/climate-smart-farming.jpg"
+                    alt="Farmer using sustainable farming practices"
+                    className="w-full h-full object-cover"
+                    width={600} height={800}
+                  />
                 <div className="absolute inset-0 bg-black/60" />
               </div>
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -293,11 +278,12 @@ const HomeView = () => {
             {/* Verified Supply Chain Card */}
             <div className="group relative h-[360px] rounded-2xl overflow-hidden">
               <div className="absolute inset-0">
-                <img 
-                  src="/supply-chain.jpg" 
-                  alt="Team analyzing supply chain data" 
-                  className="w-full h-full object-cover"
-                />
+                <Image
+                    src="/img/verified-supply.jpg"
+                    alt="Team analyzing supply chain data"
+                    className="w-full h-full object-cover"
+                    width={600} height={800}
+                  />
                 <div className="absolute inset-0 bg-black/60" />
               </div>
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -312,11 +298,12 @@ const HomeView = () => {
             {/* Fairer Income Card */}
             <div className="group relative h-[360px] rounded-2xl overflow-hidden">
               <div className="absolute inset-0">
-                <img 
-                  src="/fairer-income.jpg" 
-                  alt="Smallholder farmer with produce" 
-                  className="w-full h-full object-cover"
-                />
+                <Image
+                    src="/img/fairer-income.jpg"
+                    alt="Farmers harvesting crops"
+                    className="w-full h-full object-cover"
+                    width={600} height={800}
+                  />
                 <div className="absolute inset-0 bg-black/60" />
               </div>
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -330,24 +317,32 @@ const HomeView = () => {
           </div>
         </section>
 
-        {/* Future Vision Section */}
-        <section className="mt-32 md:mt-40 relative w-full h-[600px] rounded-2xl overflow-hidden">
-          <div className="absolute inset-0">
-            <img 
-              src="/drone.jpg" 
-              alt="Agricultural drone flying over green farmland" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/40" />
-          </div>
-          <div className="relative z-10 h-full flex items-center px-8 md:px-16">
-            <h2 className="text-[32px] md:text-[40px] lg:text-[56px] leading-[1.2] font-medium tracking-[-0.02em] max-w-[800px]">
-              We're building <span className="text-white">the future of</span><br />
-              agriculture because we are<br />
-              <span className="text-[#999999]">#BigOnSustainability.</span>
+      </div>
+
+      {/* Future Vision Section */}
+      <section className="w-full mt-32 md:mt-40 h-[600px] relative">
+        <div className="absolute inset-0">
+          <Image
+            src="/img/banner-images.png"
+            alt="Farmer using sustainable farming practices"
+            className="w-full h-full object-cover"
+            width={1000} height={2000}
+            priority
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+        <div className="relative z-10 h-full flex items-center">
+          <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-10">
+            <h2 className="lg:pt-20 text-[32px] md:text-[40px] lg:text-[56px] leading-[1.2] font-medium tracking-[-0.02em] max-w-[800px]" style={{ width: '80%' }}>
+              We're building <span className="text-white">the future of </span>
+              agriculture because we are 
+              <span className="text-[#999999]"> #BigOnSustainability.</span>
             </h2>
           </div>
-        </section>
+        </div>
+      </section>
+
+      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
 
         {/* CTA Section */}
         <section className="mt-32 md:mt-40">
@@ -520,7 +515,8 @@ const AnimatedGraph = () => {
 
       {/* Tooltip */}
       <div 
-        className="graph-tooltip absolute top-[35%] left-[35%] bg-[#FFD700] text-black px-3 py-1.5 rounded-lg font-medium"
+        className="graph-tooltip absolute bg-[#FFD700] text-black px-3 py-1.5 rounded-lg font-medium"
+        style={{ top: '35%', left: '35%' }}
       >
         2
       </div>
@@ -531,7 +527,7 @@ const AnimatedGraph = () => {
       </div>
 
       {/* Date label */}
-      <div className="absolute bottom-4 left-[35%] text-sm text-[#666666]">
+      <div className="absolute bottom-4 text-sm text-[#666666]" style={{ left: '35%' }}>
         25th Oct
       </div>
     </div>
@@ -543,8 +539,13 @@ const AnimatedGraph = () => {
 // Interactive Pie Chart Component
 const InteractivePieChart = () => {
   const chartRef = useRef(null);
-  const textRef = useRef(null);
-  const [percentage, setPercentage] = useState('40');
+  const textRefs = useRef<{[key: string]: HTMLDivElement | null}>({});
+  const [activeSegment, setActiveSegment] = useState<string | null>(null);
+
+  const segments = [
+    { id: 'export', color: '#FFD700', percentage: 75, label: 'Exports' },
+    { id: 'local', color: '#FF4500', percentage: 25, label: 'Local Market' }
+  ];
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -563,16 +564,17 @@ const InteractivePieChart = () => {
     return () => ctx.revert();
   }, []);
 
-  const handleHover = (isHover: boolean): void => {
+  const handleHover = (id: string, isHover: boolean): void => {
+    setActiveSegment(isHover ? id : null);
     if (isHover) {
-      gsap.to(textRef.current, {
+      gsap.to(textRefs.current[id], {
         scale: 1.1,
         opacity: 1,
         duration: 0.3,
         ease: "power2.out"
       });
     } else {
-      gsap.to(textRef.current, {
+      gsap.to(textRefs.current[id], {
         scale: 1,
         opacity: 0,
         duration: 0.2,
@@ -581,56 +583,62 @@ const InteractivePieChart = () => {
     }
   };
 
+  const calculateOffset = (index: number): number => {
+    return -segments
+      .slice(0, index)
+      .reduce((acc, segment) => acc + segment.percentage, 0) * 2.83;
+  };
   return (
-    <div className="relative w-[400px] h-[400px]" ref={chartRef}>
+    <div className="relative" ref={chartRef} style={{ width: 1000, height: 1000 }}>
       <svg
         viewBox="0 0 100 100"
         className="w-full h-full transform -rotate-90"
       >
+      
         {/* Background circle */}
         <circle
           cx="50"
           cy="50"
-          r="45"
+          r="40"
           fill="none"
           stroke="#1A1A1A"
-          strokeWidth="10"
+          strokeWidth="20"
         />
-        {/* Animated pie segment */}
-        <circle
-          cx="50"
-          cy="50"
-          r="45"
-          fill="none"
-          stroke="#FFD700"
-          strokeWidth="10"
-          strokeDasharray={`${40 * 2.83} ${100 * 2.83}`}
-          className="transition-all duration-300"
-          onMouseEnter={() => handleHover(true)}
-          onMouseLeave={() => handleHover(false)}
-        />
-        {/* Small segment */}
-        <circle
-          cx="50"
-          cy="50"
-          r="45"
-          fill="none"
-          stroke="#FF4500"
-          strokeWidth="10"
-          strokeDasharray={`${10 * 2.83} ${100 * 2.83}`}
-          strokeDashoffset={`${-40 * 2.83}`}
-        />
+        {/* Segments */}
+        {segments.map((segment, index) => (
+          <circle
+            key={segment.id}
+            cx="50"
+            cy="50"
+            r="40"
+            fill="none"
+            stroke={segment.color}
+            strokeWidth="20"
+            strokeDasharray={`${(segment.percentage * 2.83) - 8} ${100 * 2.83}`}
+            strokeDashoffset={calculateOffset(index) - (index * 8)}
+            className="transition-all duration-300 hover:filter hover:brightness-110"
+            style={{ cursor: 'pointer' }}
+            strokeLinecap="round"
+            onMouseEnter={() => handleHover(segment.id, true)}
+            onMouseLeave={() => handleHover(segment.id, false)}
+          />
+        ))}
       </svg>
-      {/* Percentage text */}
-      <div 
-        ref={textRef}
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl font-bold text-[#FFD700] opacity-0"
-      >
-        {percentage}%
-      </div>
+      {/* Percentage texts */}
+      {segments.map((segment) => (
+        <div 
+          key={segment.id}
+          ref={el => { textRefs.current[segment.id] = el; }}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl font-bold opacity-0 flex flex-col items-center"
+          style={{ color: segment.color }}
+        >
+          <span className="text-5xl">{segment.percentage}%</span>
+          <span className="text-2xl mt-2">{segment.label}</span>
+        </div>
+      ))}
     </div>
   );
 };
 
  
-export default HomeView;
+export default HomeView; 
