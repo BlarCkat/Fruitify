@@ -2,28 +2,45 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 const AnimatedShield = () => {
-  const shieldRef = useRef(null);
-  const innerCircleRef = useRef(null);
-  const outerCircleRef = useRef(null);
+  const shieldRef = useRef<HTMLDivElement>(null);
+  const circleRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Create array of circle configs
+  const circles = Array.from({ length: 12 }, (_, i) => ({
+    size: 100 + (i * 20), // Each circle 20% larger than the previous
+    duration: 20 + (i * 2), // Each circle slightly slower
+    direction: i % 2 === 0 ? 1 : -1, // Alternate directions
+    opacity: 0.50 - (i * 0.01) // Gradually decrease opacity
+  }));
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Rotating animations for the circles
-      gsap.to(innerCircleRef.current, {
-        rotation: 360,
-        duration: 20,
-        repeat: -1,
-        ease: "none",
-        transformOrigin: "center center"
+      // Continuous rotation animation for each circle
+      circles.forEach((circle, index) => {
+        if (circleRefs.current[index]) {
+          gsap.to(circleRefs.current[index], {
+            rotation: 360 * circle.direction,
+            duration: circle.duration,
+            repeat: -1,
+            ease: "none",
+            transformOrigin: "center center"
+          });
+        }
       });
 
-      gsap.to(outerCircleRef.current, {
-        rotation: -360,
-        duration: 30,
-        repeat: -1,
-        ease: "none",
-        transformOrigin: "center center"
+      // Staggering stroke width animation
+      const strokeTimeline = gsap.timeline({ repeat: -1 });
+      strokeTimeline.to(circleRefs.current, {
+        borderWidth: '5px',
+        duration: 1,
+        stagger: {
+          each: 0.2,
+          from: "start"
+        },
+        yoyo: true,
+        repeat: 1
       });
+      strokeTimeline.to({}, { duration: 2 }); // 2 second pause before next cycle
 
       // Entrance animation for the shield
       gsap.fromTo(shieldRef.current,
@@ -49,15 +66,19 @@ const AnimatedShield = () => {
   return (
     <div className="absolute inset-0 flex items-center justify-center">
       {/* Animated circles */}
-      <div className="absolute w-48 h-48 flex items-center justify-center">
-        <div 
-          ref={innerCircleRef} 
-          className="absolute w-full h-full rounded-full border-2 border-dashed border-[#FFD700] opacity-20"
-        />
-        <div 
-          ref={outerCircleRef}
-          className="absolute w-[120%] h-[120%] rounded-full border-2 border-dashed border-[#FFD700] opacity-10"
-        />
+      <div className="absolute w-40 h-40 flex items-center justify-center">
+        {circles.map((circle, index) => (
+          <div 
+            key={index}
+            ref={(el: HTMLDivElement | null) => { circleRefs.current[index] = el }}
+            className="absolute rounded-full border-2 border-dashed border-[#FFD700] transition-all"
+            style={{
+              width: `${circle.size}%`,
+              height: `${circle.size}%`,
+              opacity: circle.opacity
+            }}
+          />
+        ))}
       </div>
       
       {/* Shield icon */}
