@@ -398,11 +398,11 @@ const HomeView = () => {
             </div>
 
             <div className="flex gap-8">
-              <Link href="https://linkedin.com/in/fruitifyhq"><PiLinkedinLogoFill size={32}/></Link>
+              <Link href="https://www.linkedin.com/company/fruitifyafrica/"><PiLinkedinLogoFill size={32}/></Link>
               <Link href="https://instagram.com/fruitifyhq"><PiInstagramLogoFill size={32}/></Link>
               <Link href="https://x.com/fruitifyhq"><PiXLogo size={32}/></Link>
-              <Link href="https://facebook.com/fruitifyhq"><PiFacebookLogoFill size={32}/></Link>
-              <Link href="https://tiktok.com/@fruitifyhq"><PiTiktokLogoFill size={32}/></Link>
+              <Link href="https://www.facebook.com/profile.php?id=61581309088455&mibextid=wwXIfr&rdid=AiQ93dt3ITObMwf4&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17FNkXUzRo%2F%3Fmibextid%3DwwXIfr#"><PiFacebookLogoFill size={32}/></Link>
+              <Link href="https://www.tiktok.com/@fruitifyhq"><PiTiktokLogoFill size={32}/></Link>
             </div>
 
             {/* Footer Bottom */}
