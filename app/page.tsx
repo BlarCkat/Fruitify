@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import Image from 'next/image';
 import AnimatedShield from './components/AnimatedShield';
+import { PiFacebookLogoFill, PiInstagramLogoFill, PiLinkedinLogoFill, PiXLogo } from 'react-icons/pi';
+import Link from 'next/link';
 
 const HomeView = () => {
   return ( 
@@ -14,7 +16,7 @@ const HomeView = () => {
             <Image src={'/img/logo_white.svg'} alt="Frutify Logo" width={120} height={40} />
           </a>
           <button 
-            className="px-6 py-2 rounded-full text-sm bg-[#111111] border border-[#ffffff1a] hover:bg-[#ffffff1a] transition-colors"
+            className="px-6 py-2 rounded-full text-sm bg-[#FF4500] border border-[#ffffff1a] hover:bg-[#ffffff1a] transition-colors"
             aria-label="Join the waitlist"
           >
             Join the Waitlist
@@ -35,7 +37,7 @@ const HomeView = () => {
           <p className="mt-8 text-[#999999] text-lg md:text-xl max-w-[800px] leading-relaxed">
             We connect climate-smart farms, verified traceability, and global trade, empowering farmers, exporters, and buyers to achieve more, waste less, and trade sustainably.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-12">
+          <div className="flex flex-col sm:flex-row gap-4 mt-12 z-9">
             <button 
               className="px-8 py-3 rounded-full bg-[#FFD700] text-black font-medium hover:bg-[#FFE44D] transition-colors"
               aria-label="Join OnTrade platform"
@@ -53,7 +55,7 @@ const HomeView = () => {
 
         {/* Dashboard Preview Section */}
         <section 
-          className="relative w-full h-fit pb-20 scale-[1.4]"
+          className="relative w-full h-fit pb-[150px] scale-[1.4]"
           aria-label="Platform dashboard preview"
         >
           <Image src={'/img/hero_dashboard.png'} alt="OnTrade platform dashboard" layout="responsive" width={1900} height={800} />
@@ -73,7 +75,7 @@ const HomeView = () => {
               id="about-heading"
               className="text-[32px] md:text-[40px] lg:text-[48px] leading-[1.2] font-medium tracking-[-0.02em] text-[#999999] mb-8"
             >
-              Reimagining How Africa Grows, Trades, and Exports Fresh Produce.
+              Reimagining How Africa Grows,Trades, and Exports Fresh Produce.
             </h2>
             <p className="text-lg md:text-xl text-[#666666] leading-relaxed">
               Fruitify is a green tech company building the next-generation operating system 
@@ -164,10 +166,10 @@ const HomeView = () => {
                 • Track orders from farm to shipment. <br /> 
                 • Ensure compliance and audit readiness.
                 </p>
-                <button className='mt-6 bg-[#FFC32A] text-black font-bold py-2 px-4 rounded hover:opacity-70 cursor-pointer transition-opacity'>Download onTrade</button>
+                <button className='mt-6 bg-[#FFC32A] text-black font-bold py-2 px-4 rounded hover:opacity-70 cursor-pointer transition-opacity'>Join onTrade</button>
               </div>
               <div className="relative w-full h-full z-1">
-                <Image src={'/img/img_ontrade.png'} alt='ontrade' width={600} height={200} className='absolute bottom-0'/>
+                <Image src={'/img/img_ontrade.png'} alt='ontrade' width={600} height={200} className='absolute -bottom-8'/>
               </div>
             </div>
           </div>
@@ -393,6 +395,13 @@ const HomeView = () => {
               >
                 hello@fruitify.africa
               </a>
+            </div>
+
+            <div className="flex gap-8">
+              <Link href="https://x.com/fruitifyhq"><PiXLogo size={32}/></Link>
+              <Link href="https://facebook.com/fruitifyhq"><PiFacebookLogoFill size={32}/></Link>
+              <Link href="https://instagram.com/fruitifyhq"><PiInstagramLogoFill size={32}/></Link>
+              <Link href="https://linkedin.com/in/fruitifyhq"><PiLinkedinLogoFill size={32}/></Link>
             </div>
 
             {/* Footer Bottom */}
