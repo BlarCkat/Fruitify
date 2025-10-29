@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://fruitify.africa'),
   title: {
-    default: "Fruitify -Operating System for Africa's Fresh Produce Exports",
+    default: "Fruitify -The Operating System for Africa's Fresh Produce Exports",
     template: '%s | Fruitify'
   },
   description: "Next-Gen Operating System for Africa's Fresh Produce Exports.",

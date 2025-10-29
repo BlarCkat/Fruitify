@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import Image from 'next/image';
 import AnimatedShield from './components/AnimatedShield';
-import { PiFacebookLogoFill, PiInstagramLogoFill, PiLinkedinLogoFill, PiXLogo } from 'react-icons/pi';
+import { PiFacebookLogoFill, PiInstagramLogoFill, PiLinkedinLogoFill, PiTiktokLogoFill, PiXLogo } from 'react-icons/pi';
 import Link from 'next/link';
 
 const HomeView = () => {
@@ -16,7 +16,7 @@ const HomeView = () => {
             <Image src={'/img/logo_white.svg'} alt="Frutify Logo" width={120} height={40} />
           </a>
           <button 
-            className="px-6 py-2 rounded-full text-sm bg-[#FF4500] border border-[#ffffff1a] hover:bg-[#ffffff1a] transition-colors"
+            className="px-6 py-2 rounded-full text-sm text-black bg-[#FFD700] border border-[#ffffff1a] hover:bg-[#ffffff1a] transition-colors"
             aria-label="Join the waitlist"
           >
             Join the Waitlist
@@ -398,10 +398,11 @@ const HomeView = () => {
             </div>
 
             <div className="flex gap-8">
+              <Link href="https://linkedin.com/in/fruitifyhq"><PiLinkedinLogoFill size={32}/></Link>
+              <Link href="https://instagram.com/fruitifyhq"><PiInstagramLogoFill size={32}/></Link>
               <Link href="https://x.com/fruitifyhq"><PiXLogo size={32}/></Link>
               <Link href="https://facebook.com/fruitifyhq"><PiFacebookLogoFill size={32}/></Link>
-              <Link href="https://instagram.com/fruitifyhq"><PiInstagramLogoFill size={32}/></Link>
-              <Link href="https://linkedin.com/in/fruitifyhq"><PiLinkedinLogoFill size={32}/></Link>
+              <Link href="https://tiktok.com/@fruitifyhq"><PiTiktokLogoFill size={32}/></Link>
             </div>
 
             {/* Footer Bottom */}
