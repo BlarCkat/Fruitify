@@ -1,7 +1,7 @@
 {
   "name": "Fruitify",
   "short_name": "Fruitify",
-  "description": "Next-Gen Operating System for Africa's Fresh Produce Exports.",
+  "description": "The Operating System for Africa's Fresh Produce Exports.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#111827",

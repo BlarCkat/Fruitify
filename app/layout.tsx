@@ -15,21 +15,24 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://fruitify.africa'),
   title: {
-    default: "Fruitify -The Operating System for Africa's Fresh Produce Exports",
+    default: "Fruitify - The Operating System for Africa's Fresh Produce Exports",
     template: '%s | Fruitify'
   },
-  description: "Next-Gen Operating System for Africa's Fresh Produce Exports.",
+  description: "The Operating System for Africa's Fresh Produce Exports",
   keywords: ["fresh produce", "agriculture", "exports", "Africa", "farming", "digital agriculture", "supply chain", "innovation", "sustainability", "Next-Gen", "Fruitify", "OnTrade", "Onfarm", "Appateng"],
   authors: [{ name: "Fruitify" }],
   creator: "Fruitify",
   publisher: "Fruitify",
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.png", type: "image/png" }
+    icon: "/favicon.ico",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" }
     ],
-    apple: "/apple-touch-icon.png",
-    shortcut: "/shortcut-icon.png"
+    shortcut: "/favicon.ico",
+    other: [
+      { rel: "icon", url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { rel: "icon", url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" }
+    ]
   },
   viewport: {
     width: "device-width",
@@ -62,8 +65,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@fruitifyhq", // Update this to your actual Twitter handle
     creator: "@fruitifyhq", // Update this to your actual Twitter handle
-    title: "Fruitify - Africa's Fresh Produce Export Platform",
-    description: "Next-Gen Operating System for Africa's Fresh Produce Exports.",
+    title: "Fruitify - The Operating System for Africa's Fresh Produce Exports",
+    description: "The Operating System for Africa's Fresh Produce Exports.",
     images: {
       url: "/social-card.jpg",
       alt: "Fruitify Platform Preview"
@@ -74,8 +77,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://fruitify.africa",
     siteName: "Fruitify",
-    title: "Fruitify - Africa's Fresh Produce Export Platform",
-    description: "Next-Gen Operating System for Africa's Fresh Produce Exports.",
+    title: "Fruitify - The Operating System for Africa's Fresh Produce Exports",
+    description: "The Operating System for Africa's Fresh Produce Exports",
     images: [
       {
         url: "/social-card.jpg",
@@ -101,6 +104,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
