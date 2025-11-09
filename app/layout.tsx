@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://fruitify.africa'),
   title: {
-    default: "Fruitify - The Operating System for Africa's Fresh Produce Exports",
+    default: "Fruitify - The Next-Gen Operating System for Africa's Fresh Produce Exports",
     template: '%s | Fruitify'
   },
-  description: "The Operating System for Africa's Fresh Produce Exports",
+  description: "The Next Gen Operating System for Africa's Fresh Produce Exports",
   keywords: ["fresh produce", "agriculture", "exports", "Africa", "farming", "digital agriculture", "supply chain", "innovation", "sustainability", "Next-Gen", "Fruitify", "OnTrade", "Onfarm", "Appateng"],
   authors: [{ name: "Fruitify" }],
   creator: "Fruitify",
